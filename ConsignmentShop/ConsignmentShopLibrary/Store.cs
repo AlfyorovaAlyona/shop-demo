@@ -8,13 +8,15 @@ namespace ConsignmentShopLibrary
 {
     public class Store
     {
-        public bool Name { get; set; }
+        public string Name { get; set; }
         public List<Vendor> Vendors { get; set; }
         public List<Item> Items { get; set; }
+        public decimal Profit { get; set; }
 
         public Store() { 
             Vendors = new List<Vendor>();
             Items = new List<Item>();
+            Profit = 0;
         }
 
     }

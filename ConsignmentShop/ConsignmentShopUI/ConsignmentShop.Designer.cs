@@ -35,6 +35,10 @@
             cartItemsLable = new Label();
             cartListBox = new ListBox();
             purchaseButton = new Button();
+            vendorsLabel = new Label();
+            vendorsListBox = new ListBox();
+            storeDueLabel = new Label();
+            storeProfitValueLabel = new Label();
             SuspendLayout();
             // 
             // itemsListBox
@@ -56,6 +60,7 @@
             addToCartButton.TabIndex = 1;
             addToCartButton.Text = "Add To Cart ->";
             addToCartButton.UseVisualStyleBackColor = true;
+            addToCartButton.Click += addToCartButton_Click;
             // 
             // consignmentShopLabel
             // 
@@ -106,12 +111,57 @@
             purchaseButton.TabIndex = 6;
             purchaseButton.Text = "Purchase";
             purchaseButton.UseVisualStyleBackColor = true;
+            purchaseButton.Click += purchaseButton_Click;
+            // 
+            // vendorsLabel
+            // 
+            vendorsLabel.AutoSize = true;
+            vendorsLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            vendorsLabel.Location = new Point(48, 495);
+            vendorsLabel.Name = "vendorsLabel";
+            vendorsLabel.Size = new Size(88, 28);
+            vendorsLabel.TabIndex = 8;
+            vendorsLabel.Text = "Vendors";
+            // 
+            // vendorsListBox
+            // 
+            vendorsListBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            vendorsListBox.FormattingEnabled = true;
+            vendorsListBox.ItemHeight = 28;
+            vendorsListBox.Location = new Point(48, 526);
+            vendorsListBox.Name = "vendorsListBox";
+            vendorsListBox.Size = new Size(321, 144);
+            vendorsListBox.TabIndex = 7;
+            // 
+            // storeDueLabel
+            // 
+            storeDueLabel.AutoSize = true;
+            storeDueLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            storeDueLabel.Location = new Point(644, 526);
+            storeDueLabel.Name = "storeDueLabel";
+            storeDueLabel.Size = new Size(142, 28);
+            storeDueLabel.TabIndex = 10;
+            storeDueLabel.Text = "Store Profit - ";
+            // 
+            // storeProfitValueLabel
+            // 
+            storeProfitValueLabel.AutoSize = true;
+            storeProfitValueLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            storeProfitValueLabel.Location = new Point(772, 526);
+            storeProfitValueLabel.Name = "storeProfitValueLabel";
+            storeProfitValueLabel.Size = new Size(65, 28);
+            storeProfitValueLabel.TabIndex = 11;
+            storeProfitValueLabel.Text = "$0.00";
             // 
             // ConsignmentShop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1022, 535);
+            ClientSize = new Size(1022, 748);
+            Controls.Add(storeProfitValueLabel);
+            Controls.Add(storeDueLabel);
+            Controls.Add(vendorsLabel);
+            Controls.Add(vendorsListBox);
             Controls.Add(purchaseButton);
             Controls.Add(cartItemsLable);
             Controls.Add(cartListBox);
@@ -134,5 +184,9 @@
         private Label cartItemsLable;
         private ListBox cartListBox;
         private Button purchaseButton;
+        private Label vendorsLabel;
+        private ListBox vendorsListBox;
+        private Label storeDueLabel;
+        private Label storeProfitValueLabel;
     }
 }

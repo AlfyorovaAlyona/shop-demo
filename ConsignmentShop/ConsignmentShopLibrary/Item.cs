@@ -13,6 +13,12 @@ namespace ConsignmentShopLibrary
         public decimal Price { get; set; }
         public bool Sold { get; set; }
         public bool Payment { get; set; }
+        public string Display { 
+            get 
+            {
+                return string.Format("{0} - ${1}", Title, Price);
+            }
+        }
         public Vendor Owner { get; set; }
     }
 }
